@@ -1,0 +1,39 @@
+class Student{
+      void Degree(){
+        System.out.print("Student degree ");}
+}
+class BTech extends Student{
+    void Degree(){
+        System.out.println("Degree is Bachelor of Technology");}
+}
+class Cse extends BTech{
+    void Degree(){
+        System.out.println("stream is Computer Sciencec and Engineering");}
+}
+class College
+{
+	static Stuedent getStudent() {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Select Choice of Student");
+		System.out.println("1. Student ");
+		System.out.println("2. BTech");
+		System.out.println("3. CSE ");
+		int choice = scan.nextInt();
+		Student s = null;
+		switch(choice) {
+			case 1: s = new Student(); break;  
+			case 2: s = new BTech(); break;
+			case 3: s = new Cse(); break;}
+		return s;}
+}
+public class StudentTest {
+	public static void main(String[] args) {
+		Student s = College.getStudent();
+		if(d instanceof Cse) {
+			System.out.println("s is pointing at Sce");}
+		else if(d instanceof Btech) {
+			System.out.println("s is pointing at BTech");}
+		else if (d instanceof Student) {
+			System.out.println("s is pointing at Student");}
+}
+}

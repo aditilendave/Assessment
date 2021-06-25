@@ -1,0 +1,30 @@
+class Car
+{
+	void tyre(){
+		System.out.println("car tyre....");}
+	void tyre(int weight) {
+		System.out.println("car tyre..weight "+weight);}
+	void tyre(float weight) {
+		System.out.println("car tyre weight "+weight);}
+	void tyre(int weight, int height){
+		System.out.println("car tyre weight "+weight+" and height "+height);}
+	void tyre(float weight, float height){
+		System.out.println("car tyre weight "+weight+" and height "+height);}
+	void tyre(int weight, float height,String ) {
+		System.out.println("car tyre weight "+weight+" height "+height)}
+	void tyre(float weight, int height){
+		System.out.println("car tyre weight "+weight+" and height "+height);}
+	
+}
+public class Test {
+	public static void main(String[] args) {
+		Car c = new Car();
+		c.tyre(); 
+		c.tyre(100);
+		c.tyre(60.1f);
+		c.tyre(70,.5); 
+		c.tyre(70.3f,5.9f);
+		c.tyre(70,5.7);
+		c.tyre(70.1f,4);
+	}
+}
