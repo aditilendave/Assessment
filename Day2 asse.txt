@@ -1,0 +1,59 @@
+public abstract class Animal{
+
+	private String name;
+	
+	public Animal(String name){
+		this.name = name;
+	}
+	
+	public void printName(){
+		System.out.println("My name is: " + name);
+	}
+	
+	public abstract void eat();
+}
+public class Frog extends Animal{
+
+	public Frog(String name){
+		super(name);	
+	}
+	
+	public void ribbit(){
+		System.out.println("Ribbit ribbit.");
+	}   
+	
+	public void eat(){
+		System.out.println("I crunch up a cricket.");	
+	}
+}
+public interface Flyer{
+	public void fly();
+}
+public class Bird implements Flyer{
+
+	public void fly(){
+		System.out.println("flying.....");
+	}
+	
+	public void chirp(){
+		System.out.println("Sound...!");	
+	}
+
+public class Bird extends Animal implements Flyer{
+
+	public Bird(String name){
+		super(name);
+	}
+	public void fly(){
+		System.out.println("flaying");
+	}
+	
+	public void chirp(){
+		System.out.println("sound!");	
+	}
+	
+	public static void main(String[] args){
+		Bird myBird = new Bird("sparow");
+		myBird.chirp();
+	}
+}
